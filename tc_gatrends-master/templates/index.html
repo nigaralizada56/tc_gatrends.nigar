@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div class="header" style="background-color: #151b5f; font-size: '48px';  margin-top: 0; padding: 20px 20px 20px 40px;">
+    <img id="hype-logo" style="height: 45px;" src="https://i.hizliresim.com/pbbM3J.png"/>
+    <h2 style="color:white; font-family: Questrial, sans-serif;"> Google Trends Tool </h2>
+    <ul class="nav" style="float:right; width: 150px; margin-top: -80px; list-style-type: none;">
+        <li style="text-align: center;"><a
+                style="font-family: Questrial, sans-serif; display: block; color: white; padding: 16px; text-decoration: none;"
+                href="/">DASHBOARD</a></li>
+    </ul>
+</div>
+
+<div style="margin-left: 30px;">
+    <p style="font-family: Questrial, sans-serif">{{ errors }}</p>
+    <form method="post" action="." style="width:300px;">
+        <fieldset style="border-radius: 3px; border: 1px solid #151b5f;">
+            <legend style="font-family: Questrial, sans-serif; font-weight: bold; font-size:18px;"> Keywords</legend>
+            <p style="font-family: Questrial, sans-serif">{{ last_inserted }}</p>
+            <p style="font-family: Questrial, sans-serif; font-style: italic;">Enter your keywords:</p>
+            <p style="font-family: Questrial, sans-serif"><input name="keyword"
+                                                                 style="border-radius: 3px; border: 1px solid #151b5f;"
+                                                                 placeholder="Enter your keywords..."/></p>
+            <p style="font-family: Questrial, sans-serif"><input type="submit" name="action" value="Add another"
+                                                                 style="background-color: #151b5f; border: none; color: white; text-decoration: none; cursor: pointer; padding: 8px 16px; font-weight: bold;"/>
+            </p>
+        </fieldset>
+        <br>
+        <fieldset style="border-radius: 3px; border: 1px solid #151b5f;">
+            <legend style="font-family: Questrial, sans-serif; font-weight: bold; font-size:18px;"> Dates</legend>
+            <p style="font-family: Questrial, sans-serif; font-style: italic;">Enter start date: </p>
+            <p style="font-family: Questrial, sans-serif"><input name="s_date"
+                                                                 style="border-radius: 3px; border: 1px solid #151b5f;"
+                                                                 type="date"/></p>
+            <p style="font-family: Questrial, sans-serif; font-style: italic;">Enter end date: </p>
+            <p style="font-family: Questrial, sans-serif"><input name="e_date"
+                                                                 style="border-radius: 3px; border: 1px solid #151b5f;"
+                                                                 type="date"/></p>
+        </fieldset>
+        <p style="font-family: Questrial, sans-serif"><input type="submit"
+                                                             style="background-color: #151b5f; border: none; color: white; text-decoration: none; cursor: pointer; padding: 16px 32px; font-weight: bold;"
+                                                             name="action" value="Get trends"/></p>
+    </form>
+</div>
+</body>
+</html>
